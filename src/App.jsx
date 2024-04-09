@@ -10,7 +10,7 @@ function App() {
     <AddTodos />
     <ul className="list-none">
     {todos.map((todo) => (
-    <Todos todo={todo}/>
+    <Todos key={todo.id} todo={todo}/>
     ))}
     </ul>
     </>

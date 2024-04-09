@@ -24,14 +24,14 @@ const Todos = ({todo}) => {
             {/* <ul className="list-none"> */}
                 {/* {todos.map((todo) => ( */}
                     <li
-                        className={`mt-4 mx-auto w-1/2 flex justify-between items-center ${!todo.completed ? "bg-zinc-800" : "bg-green-400 text-black"}  px-4 py-2 rounded`}
+                        className={`mt-4 mx-auto w-1/2 flex justify-between items-center ${!todo.completed ? "bg-zinc-800" : "bg-green-400"}  px-4 py-2 rounded`}
                         key={todo.id}
                     >
                         <input className="cursor-pointer" type="checkbox" checked={todo.completed} onChange={() => toggleComplete(todo.id)} />
                         <input 
                                 type='text' 
                                 readOnly={!todo.editable} 
-                                className={`border-none ml-4 outline-none w-full bg-transparent text-white ${todo.completed ? "line-through  text-black" : ""} ${
+                                className={`border-none ml-4 outline-none w-full bg-transparent  ${todo.completed ? "line-through text-black" : " text-white"} ${
                                     todo.editable ? "border-black/10 px-2" : "border-transparent"
                                 }`}
                                 value={todoMsg}
